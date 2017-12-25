@@ -1,0 +1,19 @@
+{
+  "name": "gulp_work",
+  "version": "1.0.0",
+  "description": "learning to use gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kryaksy/gulp_work.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kryaksy/gulp_work/issues"
+  },
+  "homepage": "https://github.com/kryaksy/gulp_work#readme"
+}
