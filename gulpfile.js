@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 
-gulp.task('task-name', function() {
+// [$ gulp hi] returns 'Hello Ibo!'
+gulp.task('hi', function() {
 	// Stuff here
+	console.log('Hi Ibo!');
 });
