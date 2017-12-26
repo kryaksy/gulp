@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 
 // [$ gulp hi] returns 'Hello Ibo!':
 gulp.task('hi', function() {
