@@ -1,10 +1,23 @@
 // REQUIRES
-const gulp = require('gulp');
+const gulp = require('gulp'),
+    useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    minifyCss = require('gulp-clean-css');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 
 // TASKS
+
+//useref task
+gulp.task('html', () => {
+  return gulp.src('app/*.html')
+  .pipe(useref())
+  .pipe(gulpif('*.js', uglify()))
+  .pipe(gulpif('*.js', minifyCss()))
+  .pipe(gulp.dest('dist'))
+})
 
 // Browser Sync task
 gulp.task('browserSync', function() {
