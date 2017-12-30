@@ -10,7 +10,7 @@ const browserSync = require('browser-sync').create();
 // TASKS
 
 //useref task
-gulp.task('useref', ['useref'], () => {
+gulp.task('useref', () => {
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulp.dest('dist'));
