@@ -4,7 +4,13 @@ const gulp = require('gulp'), useref = require('gulp-useref'),  gulpif = require
     minifyCss = require('gulp-clean-css'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
-    cssnano = require('gulp-cssnano');
+    imagemin = require('gulp-imagemin');
+
+gulp.task('imagemin', () => {
+    gulp.src('app/images/*.png')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images'))
+});
 
 // TASKS
 
