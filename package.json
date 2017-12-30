@@ -4,7 +4,9 @@
   "description": "learning to use gulp",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "useref" : "gulp useref",
+    "start": "gulp browserSync"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "browser-sync": "^2.21.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "gulp-useref": "^3.1.3"
   }
 }
