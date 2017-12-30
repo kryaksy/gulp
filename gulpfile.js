@@ -7,8 +7,10 @@ const gulp = require('gulp'), useref = require('gulp-useref'),  gulpif = require
     imagemin = require('gulp-imagemin');
 
 gulp.task('imagemin', () => {
-    gulp.src('app/images/*.png')
-    .pipe(imagemin())
+    gulp.src('app/images/*.+(png|jpg|gif|svg)')
+    .pipe(imagemin( {
+      interlaced: true
+    } ))
     .pipe(gulp.dest('dist/images'))
 });
 
