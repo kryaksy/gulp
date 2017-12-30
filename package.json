@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/kryaksy/gulp_work.git"
   },
-  "author": "",
+  "author": "kryaksy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kryaksy/gulp_work/issues"
@@ -19,6 +19,14 @@
   "devDependencies": {
     "browser-sync": "^2.21.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-clean-css": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.3"
+  },
+  "dependencies": {
+    "useref": "^1.4.0"
   }
 }
