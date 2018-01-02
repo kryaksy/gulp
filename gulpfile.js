@@ -1,11 +1,8 @@
 // REQUIRES
 const gulp = require('gulp'),
     sass = require('gulp-sass'),
-    browserSync = require('browser-sync').create(),
-    useref = require('gulp-useref'),
-    gulpif = require('gulp-if'),
-    uglify = require('gulp-uglify'),
-    cssnano = require('gulp-cssnano');
+    browserSync = require('browser-sync').create();
+
 /*
     const gulp = require('gulp'),
         useref = require('gulp-useref'),
@@ -16,10 +13,10 @@ const gulp = require('gulp'),
         browserSync = require('browser-sync').create();
 */
 
-
 // TASKS
 
 //Useref task
+/*
 gulp.task('useref', () => {
   return gulp.src('app/*.html')
     .pipe(useref().on('error', useref.logError))
@@ -27,6 +24,8 @@ gulp.task('useref', () => {
     .pipe(gulpif('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
 });
+*/
+
 
 // Browser Sync task
 gulp.task('browserSync', () => {
