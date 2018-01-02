@@ -1,41 +1,32 @@
 // REQUIRES
-const gulp = require('gulp'), useref = require('gulp-useref'),  gulpif = require('gulp-if'),
-    uglify = require('gulp-uglify'),
-    minifyCss = require('gulp-clean-css'),
+const gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
-    imagemin = require('gulp-imagemin');
+    useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    cssnano = require('gulp-cssnano');
+/*
+    const gulp = require('gulp'),
+        useref = require('gulp-useref'),
+        gulpif = require('gulp-if'),
+        uglify = require('gulp-uglify'),
+        cssnano = require('gulp-cssnano'),
+        sass = require('gulp-sass'),
+        browserSync = require('browser-sync').create();
+*/
 
-gulp.task('imagemin', () => {
-    gulp.src('app/images/*.+(png|jpg|gif|svg)')
-    .pipe(imagemin( {
-      interlaced: true
-    } ))
-    .pipe(gulp.dest('dist/images'))
-});
 
 // TASKS
 
-
-//useref task
+//Useref task
 gulp.task('useref', () => {
   return gulp.src('app/*.html')
-    .pipe(useref())
+    .pipe(useref().on('error', useref.logError))
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', cssnano()))
     .pipe(gulp.dest('dist'));
 });
-
-/*
-//html task
- gulp.task('', () => {
-  return gulp.src('app/*.html')
-  .pipe(useref().on('error', useref.logError))
-  .pipe(gulpif('*.js', uglify()))
-  .pipe(gulpif('*.css', cssnano()))
-  .pipe(gulp.dest('dist'))
-})
-*/
 
 // Browser Sync task
 gulp.task('browserSync', () => {
